@@ -1,3 +1,5 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+# Page settings
+baseurl = "https://miloradbozic.github.io/"
+title = "milorad.bozic"
 languageCode = "en-us"
-title = "My New Hugo Site"
+theme = "hugo-theme-bleak"
