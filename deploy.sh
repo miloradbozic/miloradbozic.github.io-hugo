@@ -1,24 +1,12 @@
 #!/bin/bash
-
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
-# Build the project.
-hugo # if using a theme, replace by `hugo -t <yourtheme>`
-
-# Go To Public folder
-cd public
-# Add changes to git.
+# Builds the site and pushes it to the master branch of miloradbozic.github.io (served by GitHub Pages).
+set -e
+SITE_DIR=$(mktemp -d)
+git clone -q -b master https://github.com/miloradbozic/miloradbozic.github.io.git "$SITE_DIR"
+find "$SITE_DIR" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+hugo -d "$SITE_DIR"
+cd "$SITE_DIR"
 git add -A
-
-# Commit changes.
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg"
-
-# Push source and build repos.
+git commit -m "${1:-rebuilding site $(date)}"
 git push origin master
-
-# Come Back
-cd ..
+rm -rf "$SITE_DIR"

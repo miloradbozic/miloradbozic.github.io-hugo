@@ -1,0 +1,21 @@
+name: Projects
+source:
+  - icon: fa fa-film
+    name: oxblood
+    description: AI music-video editor with directorial intent. Turns a song plus raw footage into a finished video where every cut lands on the beat, driven by an analyze-plan-execute agent loop you can steer with plain sentences.
+    url: https://oxblood.netlify.app
+
+  - icon: fa fa-github
+    name: marionet
+    description: Testbed for fully agentic solutions. An MCP-based agent with shell, filesystem and browser access, governed by a permission-policy engine and a per-client Docker sandbox with default-deny egress.
+    url: https://github.com/miloradbozic/marionet
+
+  - icon: fa fa-cog
+    name: ContextCopilot
+    description: Context engine for real-time conversation copilots. Decides whether a turn deserves an answer and assembles the context for it, with a dependency-free core and injected LLM adapters.
+    url: /projects/
+
+  - icon: fa fa-cog
+    name: Conversational State Engine
+    description: Persistent behavioral state for LLM agents (in development). The state layer owns the agent's behavior through a deterministic policy layer; the LLM only decides wording.
+    url: /projects/

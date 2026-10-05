@@ -1,5 +1,33 @@
-# Page settings
-baseurl = "https://miloradbozic.github.io/"
-title = "milorad.bozic"
-languageCode = "en-us"
-theme = "hugo-theme-bleak"
+baseURL = "https://miloradbozic.github.io/"
+languageCode = "en-US"
+title = "Milorad Bozic"
+theme = "hugo-sustain"
+
+[params]
+  avatar = "img/profile.png"
+  author = "Milorad Bozic"
+  description = "Backend engineering notes: distributed systems, Go, PHP, TypeScript and whatever I'm breaking this month"
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github  = "miloradbozic"
+  Email   = "miloradbozic29@gmail.com"
+  Twitter = "milorad_bozic"
+  RSS     = "/blog/index.xml"
+
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+[[menu.main]]
+  name = "resume"
+  identifier = "resume"
+  weight = 300
+  url = "/resume/"
